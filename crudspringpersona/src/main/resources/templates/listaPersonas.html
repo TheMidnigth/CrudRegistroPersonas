@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/StylelistaPersonas.css">
+</head>
+
+<body>
+    <div class="contenido-nav">
+        <header>
+            <ul class="nav">
+                <!-- *Para dirigirte a una pagina diferente con la etiqueta a en spring boot
+                * el href le agregamos un th:href y entre comillas la ruta de la pagina como se muestra a continuacion
+                * <li><a th:href="@{/people}">Lista de personas</a></li>-->
+                <li><a  class="Parrafo" href="#">Control de personas</a></li>
+                <li><a href="#">Registro de personas</a></li>
+                <li><a th:href="@{/people}">Lista de personas</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="contenido">
+        <div class="filas">
+            <h1>Lista Personas</h1>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- *Para darle funcionalidad al html con spring boot en una tabla tenemos que poner dentro del tbody en el tr
+                * un thymeleaf con la variable que queramos mostrar y recorrer en este caso la lista de personas de la  base de datos
+                *donde vamos a recorrer la lista de personas con  un th:each y el nombre de la variable que queremos recorrer es persona-->
+                <tr th:each="personas : ${people}">
+                    <!-- * para mostrar el nombre de la persona en la tabla tenemos que poner en los td
+                    * un thymeleaf con la variable persona que recorremos y el nombre del atributo que queremos mostrar de la base de datos-->
+                    <td th:text="${personas.nombre}">Nombre</td>
+                    <td th:text="${personas.apellido}">Apellido</td>
+                    <td th:text="${personas.email}">Email</td>
+                    <td th:text="${personas.telefono}">Telefono</td>
+                    <td th:text="${personas.direccion}">Direccion</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CrudspringpersonaApplication<crudspringpersona>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.crudpersona.crudspringpersona.CrudspringpersonaApplication",
+            "projectName": "crudspringpersona",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

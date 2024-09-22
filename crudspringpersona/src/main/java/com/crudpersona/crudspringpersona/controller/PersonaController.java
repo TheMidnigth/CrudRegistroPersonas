@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.crudpersona.crudspringpersona.model.PersonaModel;
 import com.crudpersona.crudspringpersona.service.PersonaService;
 
 @Controller
@@ -26,5 +27,13 @@ public class PersonaController {
         model.addAttribute("people", personaService.listarPersonas());
         return "listaPersonas";
     }
+
+    @GetMapping("/registroPersonas")
+    public String  registroPersonas(Model model){
+        PersonaModel persona = new PersonaModel();
+        model.addAttribute("people", persona);
+        return "registroPersona";
+    }
+
 
 }
