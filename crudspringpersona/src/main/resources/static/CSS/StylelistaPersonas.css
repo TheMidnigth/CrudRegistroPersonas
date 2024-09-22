@@ -1,7 +1,8 @@
 *{
     font-family: sans-serif,Tahoma;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Montserrat";
 }
 .contenido {
     display: flex;
@@ -13,7 +14,7 @@
 
 table {
     width: 80%;
-    max-width: 800px;
+    max-width: 900px;
     border-collapse: collapse;
     margin: 20px 0;
 
@@ -71,5 +72,6 @@ header{
 .Parrafo{
     font-size: 30px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: "Montserrat";
 }

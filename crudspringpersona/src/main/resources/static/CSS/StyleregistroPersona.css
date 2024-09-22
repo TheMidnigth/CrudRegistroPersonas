@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenido h1 {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.contenido {
+    background-color: purple;
+    width: 400px;
+    height: 600px;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.input-box input {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 13px;
+    padding: 0 0 0 10px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+.input-box i{
+    position: absolute;
+    right: 5px;
+    top: 35%;
+    transform: translate(-30%);
+    font-size: 20px;
+}
+
+.input-box ::placeholder {
+    color: black;
+}
+
+.contenido .input-box {
+    width: 98%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.button {
+    height: 50px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.type1::after {
+    content: "Save";
+    height: 50px;
+    width: 400px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+    content: "Sign Up";
+    height: 50px;
+    width: 400px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
