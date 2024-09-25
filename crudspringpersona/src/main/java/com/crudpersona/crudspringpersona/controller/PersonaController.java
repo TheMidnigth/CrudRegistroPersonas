@@ -23,12 +23,27 @@ public class PersonaController {
     @Autowired
     private PersonaService personaService;
 
+    /*
+     * Ponemos un GetMapping y le pasamos la ruta  que queremos que tenga
+     * Creamos un metodo que retornara un String en este caso un html este metodo tambien
+     * retornara el metodo listarPersonas  que se encuentra en el servicio este metodo tiene que estar
+     * parametrizado con la clase Model y un objeto de esa clase que se encargara de invocar a los metodos
+     * de dicha clase usando el objeto model llamamos al metodo addAtribute donde pide dos parametros
+     * el primero es el nombre del atriibuto le podemos pasar cualquiera y el segundo sera el valor del atributo
+     * donde le tenemos que pasar los metodos de la clase service en este caso fue el metodo listasPersonas
+     */
     @GetMapping("/listaPersonas")
     public String listaPersonas(Model model){
         model.addAttribute("people", personaService.listarPersonas());
         return "listaPersonas";
     }
 
+    /*
+     * Creamos un metodo llamado registrarPersonas que retornara el html registroPersonas
+     * Hacemos lo mismo que en el anterior metodo la unica diferencia que tenemos que
+     * instanciar la clase PersonaModel y el objeto de esa clase  pasarla como parametro al metodo addAtribute
+     * en el valor del atributo
+     */
     @GetMapping("/registroPersonas")
     public String registroPersonas(Model model){
         PersonaModel persona = new PersonaModel();
