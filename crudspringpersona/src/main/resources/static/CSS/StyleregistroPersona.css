@@ -1,10 +1,6 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-position: center;
-    background-size: cover;
+body{
+    margin: 0;
+    padding: 0;
 }
 
 .contenido h1 {
@@ -13,18 +9,23 @@ body {
     font-style: italic;
     letter-spacing: 2px;
     text-align: center;
+    color: #fff;
+    
 }
 
 .contenido {
-    background-color: purple;
+    background-color:#331055;
     width: 400px;
     height: 600px;
     padding: 20px 30px;
     border-radius: 20px;
+    margin: auto;
+    border: 2px solid  gray;
+    box-shadow: rgba(0, 0,0, .1);
 }
 
 .input-box input {
-    background-color: transparent;
+    background-color: #fff;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -35,7 +36,6 @@ body {
     font-family: "Montserrat";
     font-weight: 700;
     font-style: italic;
-
 }
 
 .input-box i{
@@ -59,7 +59,7 @@ body {
 
 .button {
     height: 50px;
-    width: 400px;
+    width: 405px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -94,7 +94,7 @@ body {
     content: "Sign Up";
     height: 50px;
     width: 400px;
-    background-color: #fff;
+    background-color:#fff;
     color: #008080;
     position: absolute;
     top: 0%;
@@ -114,4 +114,50 @@ body {
 
 .type1:hover::before {
     transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+header{
+    background-color: #140d1a;
+    box-sizing: border-box;
+    padding: 2em;
+    display: flex;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    font-size: 18px;
+    margin-right: 40px;
+}
+
+.nav a {
+    color: #822989;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+}
+
+.Parrafo{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.parrafo1{
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.contenido-nav{
+    margin-bottom: 30px;
 }

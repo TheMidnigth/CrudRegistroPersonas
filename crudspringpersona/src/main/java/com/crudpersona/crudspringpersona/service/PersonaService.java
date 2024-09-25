@@ -27,5 +27,14 @@ public class PersonaService {
         return personaRepository.findAll();
     }
 
+    /*
+     * Metodo para guardar a las personas en la base de datos y en la tabla
+     * pasandole como parametro la clase model y utilizando el objeto de personaRepository
+     * para invocar  el metodo save para guardar a una persona
+     */
+    public PersonaModel guardarPersona(PersonaModel personaModel){
+        return personaRepository.save(personaModel);
+    }
+
 
 }

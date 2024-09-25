@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de personas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="/CSS/StyleregistroPersona.css">
     <link rel="stylesheet" href="/CSS/fonts.css">
 </head>
 <body>
+    <div class="contenido-nav">
+        <header>
+            <ul class="nav">
+                <!-- *Para dirigirte a una pagina diferente con la etiqueta a en spring boot
+                * el href le agregamos un th:href y entre comillas la ruta de la pagina como se muestra a continuacion
+                * <li><a th:href="@{/people}">Lista de personas</a></li>-->
+                <li><a  class="Parrafo" href="#">Control de personas</a></li>
+                <li><a  class="parrafo1" href="#">Registro de personas</a></li>
+                <li><a  class="parrafo1" th:href="@{listaPersonas}">Lista de personas</a></li>
+            </ul>
+        </header>
+    </div>
     <div class="contenido">
         <h1>Sing Up</h1>
-        <form action="">
+        <!-- *Dentro de la etiqueta form agregamos el spring boot en el action agregamos el th y adentro del action
+        * le pasamos el nombre de mi metodo guardarPersonas de mi controlador PersonaController.java-->
+        <form th:action="@{guardarPersonas}" th:object="${peoples}" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <!-- * En los input agregamos el spring boot para  poder obtener los datos de la vista y poderlos enviar a la base de datos
+                *  En el name le pasamos el nombre del atributo de mi modelo Persona.java con th:field adentro le pasamos lo siguiente
+                * th:field="*{nombre}" hacemos lo mismo en todos los input-->
+                <input type="text" placeholder="Username" required th:field="*{nombre}">
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Apellido" required>
+                <input type="text" placeholder="Apellido" required  th:field="*{apellido}">
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-box">
-                <input type="email" placeholder="Correo Electronico" required>
+                <input type="email" placeholder="Correo Electronico" required  th:field="*{email}">
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Telefono" required>
+                <input type="text" placeholder="Telefono" required   th:field="*{telefono}">    
                 <i class="fa-solid fa-phone"></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Direccion" required>
+                <input type="text" placeholder="Direccion" required   th:field="*{direccion}">
                 <i class="fa-solid fa-compass"></i>
             </div>
-            <button class="button type1"  type="submit"></button>
+            <button class="button type1" type="submit"></button>
         </form>
     </div>
     <script src="script.js"></script>
