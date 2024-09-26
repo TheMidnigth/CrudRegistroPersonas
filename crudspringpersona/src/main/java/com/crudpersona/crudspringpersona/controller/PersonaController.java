@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -46,13 +45,12 @@ public class PersonaController {
      */
     @GetMapping("/registroPersonas")
     public String registroPersonas(Model model){
-        PersonaModel persona = new PersonaModel();
-        model.addAttribute("peoples", persona);
+        model.addAttribute("peoples", new PersonaModel());
         return "registroPersona";
     }
 
     @PostMapping("/guardarPersonas")
-    public String guardarPersona(@ModelAttribute("peoples") PersonaModel personaModel){
+    public String guardarPersona(PersonaModel personaModel){
         personaService.guardarPersona(personaModel);
         return "redirect:/Personas/listaPersonas";
     }
