@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.crudpersona.crudspringpersona.model.PersonaModel;
@@ -54,5 +55,25 @@ public class PersonaController {
         return "redirect:/Personas/listaPersonas";
     }
 
+    @GetMapping("/editarPersonas/{id}")
+    public String editarPersona(@PathVariable Long id, Model model){
+        model.addAttribute("personas", personaService.buscarPersonaPorId(id));
+        return "editarPersona";
+    }
+
+    @PostMapping("/actualizarPersonas/{id}")
+    public String actualizarPersona(@PathVariable Long id, PersonaModel personaModel){
+        personaService.buscarPersonaPorId(id);
+        personaService.actualizarPersona(personaModel);
+        return "redirect:/Personas/listaPersonas";
+
+    }
+
+    @GetMapping("/eliminarPersonas/{id}")
+    public String eliminarPersonas(@PathVariable Long id){
+        personaService.eliminarPersona(id);
+        return "redirect:/Personas/listaPersonas";
+
+    }
 
 }
