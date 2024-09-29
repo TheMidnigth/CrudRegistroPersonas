@@ -13,8 +13,8 @@
 }
 
 table {
-    width: 80%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1200px;
     border-collapse: collapse;
     margin: 20px 0;
 
@@ -76,3 +76,96 @@ header{
     font-family: "Montserrat";
 }
 
+.button1 {
+    width: 150px;
+    height: 50px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.button1:hover {
+    letter-spacing: 3px;
+    background-color: #00a100;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(6, 249, 39) 0px 7px 29px 0px;
+}
+
+.button1:active {
+    letter-spacing: 3px;
+    background-color: #00a100;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(6, 249, 39) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.button2 {
+    width: 150px;
+    height: 50px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.button2:hover {
+    letter-spacing: 3px;
+    background-color: hsl(4, 97%, 50%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(249, 21, 6) 0px 7px 29px 0px;
+}
+
+.button2:active {
+    letter-spacing: 3px;
+    background-color: hsl(4, 97%, 50%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(249, 21, 6) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.button1 a{
+    color:green;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button2 a{
+    color: red;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button1 a:hover{
+    color: #fff;
+}
+
+.button2 a:hover{
+    color: #fff;
+}
+
+.contenido-button{
+    display: flex;
+}
+
+.contenido-button .button1{
+    margin: 5px;
+}
+
+.contenido-button .button2{
+    margin: 5px;
+}
