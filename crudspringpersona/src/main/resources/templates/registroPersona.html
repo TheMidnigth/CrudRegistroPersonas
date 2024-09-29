@@ -25,7 +25,7 @@
         <h1>Sing Up</h1>
         <!-- *Dentro de la etiqueta form agregamos el spring boot en el action agregamos el th y adentro del action
         * le pasamos el nombre de mi metodo guardarPersonas de mi controlador PersonaController.java-->
-        <form th:action="@{/guardarPersonas}" th:object="${peoples}" method="POST">
+        <form th:action="@{/Personas/guardarPersonas}" th:object="${peoples}" method="POST">
             <div class="input-box">
                 <!-- * En los input agregamos el spring boot para  poder obtener los datos de la vista y poderlos enviar a la base de datos
                 *  En el name le pasamos el nombre del atributo de mi modelo Persona.java con th:field adentro le pasamos lo siguiente
